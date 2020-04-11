@@ -104,27 +104,52 @@ occurrences of the specified character within the string. For example, there are
 /*Trolls are attacking your comment section! Create a function that takes a string and returns a new string with all vowels removed. 
 For example, “This website is for losers LOL!” returns “Ths wbst s fr lsrs LL!“.*/
 
-function trolls(string) {
-    count = 0; 
+// function troll(string) {
+//     let result = 0; 
+//     for (let i = 0; i < string.length; i++) {
+//         if (string[i] === 'a') {
+//             result = string.splice(string[i]); 
+//         }
+//     }
+//     return result; 
+// }
+// console.log(troll('the cat is on the table')); 
 
-for(let i = 0; i < string.length; i++) {
-    if (string[i] === 'a') {
-        result = string.length - i;  
-    }else if (string[i] === 'e') {
-        result = string.length - i; 
-    }else if (string[i] === 'i') {
-        result = string.length - i; 
-    }else if (string[i] === 'o') {
-        result = string.length - i; 
-    }else if (string[i] === 'u') {
-        result = string.length - i;  
-    }
-}
-    return result; 
-} 
 
-console.log(trolls('you drink coffee')); 
+// function count(string) {
+//     let vowels = 0; 
+//     let lowerCaseString = string.toLowerCase(); 
+//     for (let i = 0; i < lowerCaseString.length; i++) {
+//         if (lowerCaseString[i] === 'a') {
+//             vowels = vowels +1; 
+//         }else if (lowerCaseString[i] === 'e') {
+//             vowels = vowels +1; 
+//         }else if (lowerCaseString[i] === 'i') {
+//             vowels = vowels +1; 
+//         }else if (lowerCaseString[i] === 'o') {
+//             vowels = vowels +1; 
+//         }else if (lowerCaseString[i] === 'u') {
+//             vowels = vowels +1; 
+//         }
+//     }
+//     return vowels; 
+// }
 
+// let name = 'Elisa'; 
+// console.log(count(name)); 
+
+// function trolls(string) {
+//     let vowels =  ['a', 'e', 'i', 'o', 'u'];
+//     return string.replace(/#vowels/g, ''); 
+// }
+// console.log(trolls('you drink coffee')); 
+
+// function trolls(string) {
+//     let vowels =  ['a', 'e', 'i', 'o', 'u'];  
+//     return string.splice(vowels);   
+// } 
+
+// console.log(trolls('you drink coffee')); 
 
 
 
@@ -138,3 +163,45 @@ console.log(trolls('you drink coffee'));
 // }
 
 // console.log(repeatString('Hello', 3));
+
+
+//Write a function that reverse a number. For example, 12345 = 54321.
+
+// function reverseNumber(number) {
+//     number = number.toString(); 
+//     return number.split('').reverse().join(''); 
+// }
+
+// console.log(reverseNumber(134)); 
+
+
+//Write a function that accepts three separate digits and makes them a number. For example, 1, 4, and 9 will become 149.
+
+// function mergeNumbers(digit1, digit2, digit3) {
+//     return digits.join(''); 
+// }
+
+// let digits = [2, 4, 6]; 
+
+// console.log(mergeNumbers()); 
+
+/*Write a function that accepts a year and returns whether it is a leap year. A year is a leap year if it is (1) divisible 
+by 4 and not divisible by 100, or else (2) is divisible by 400. It should return a boolean value.*/
+
+// function leapFinder(year) {
+//     if ((year % 4 === 0) || (year % 100 === 0) || (year % 400 === 0)) {
+//         year = 'Leap year'; 
+//     } else {
+//         year = 'Not a leap year'; 
+//     }
+
+//     return year; 
+// }
+
+// console.log(leapFinder(2020)); 
+
+
+/*Write a function that takes two parameters: the year of birth and the year to count years in relation to. 
+Provide output in this format: For dates in the future: “You are NN years old.” For dates in the past: “You will be born in NN years.” 
+If the year of birth equals the year requested return: “You were born this very year!” For example, for 2000 and 1998 you will get 
+“You will be born in 2 years.”*/
