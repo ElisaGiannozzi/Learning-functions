@@ -132,18 +132,18 @@ console.log(reverseNumber(134));
 //Write a function that accepts three separate digits and makes them a number. For example, 1, 4, and 9 will become 149.
 
 function mergeNumbers(digit1, digit2, digit3) {
-    let merge = digit1 + digit2 + digit3; 
-    let newNumber = +merge; 
+    let merge = `${digit1}${digit2}${digit3}`; 
+    let newNumber = merge; 
     return newNumber; 
 }
 
-console.log(mergeNumbers('2','4','6')); 
+console.log(mergeNumbers(2,4,6)); 
 
 /*Write a function that accepts a year and returns whether it is a leap year. A year is a leap year if it is (1) divisible 
 by 4 and not divisible by 100, or else (2) is divisible by 400. It should return a boolean value.*/
 
 function leapFinder(year) {
-    if ((year % 4 === 0) || (year % 100 !== 0) || (year % 400 === 0)) {
+    if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
         year = 'Leap year'; 
     } else {
         year = 'Not a leap year'; 
