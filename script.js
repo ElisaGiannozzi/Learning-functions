@@ -112,14 +112,11 @@ console.log(replaceCharacter('you drink coffee'));
 
 //Write a function which repeats the given string exact number of times. For example, repeatString("Hello", 5) returns “HelloHelloHelloHelloHello”.
 
-
 function repeatString(string, number) {
-    for (let i= 1; i <= number; i++) {
-        document.write(string); 
-    }
+    let newString = string.repeat(number); 
+    return newString;    
 }
-
-console.log(repeatString('Hello', 3));
+console.log(repeatString('Hello', 5));
 
 
 //Write a function that reverse a number. For example, 12345 = 54321.
@@ -135,18 +132,18 @@ console.log(reverseNumber(134));
 //Write a function that accepts three separate digits and makes them a number. For example, 1, 4, and 9 will become 149.
 
 function mergeNumbers(digit1, digit2, digit3) {
-    return digits.join(''); 
+    let merge = digit1 + digit2 + digit3; 
+    let newNumber = +merge; 
+    return newNumber; 
 }
 
-let digits = [2, 4, 6]; 
-
-console.log(mergeNumbers()); 
+console.log(mergeNumbers('2','4','6')); 
 
 /*Write a function that accepts a year and returns whether it is a leap year. A year is a leap year if it is (1) divisible 
 by 4 and not divisible by 100, or else (2) is divisible by 400. It should return a boolean value.*/
 
 function leapFinder(year) {
-    if ((year % 4 === 0) || (year % 100 === 0) || (year % 400 === 0)) {
+    if ((year % 4 === 0) || (year % 100 !== 0) || (year % 400 === 0)) {
         year = 'Leap year'; 
     } else {
         year = 'Not a leap year'; 
@@ -155,7 +152,7 @@ function leapFinder(year) {
     return year; 
 }
 
-console.log(leapFinder(2020)); 
+console.log(leapFinder(200)); 
 
 
 /*Write a function that takes two parameters: the year of birth and the year to count years in relation to. 
@@ -176,3 +173,4 @@ function yearCalculator(birthYear, year) {
 }
 
 console.log(yearCalculator(1998, 2000)); 
+
