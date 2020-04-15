@@ -152,7 +152,7 @@ function leapFinder(year) {
     return year; 
 }
 
-console.log(leapFinder(200)); 
+console.log(leapFinder(2020)); 
 
 
 /*Write a function that takes two parameters: the year of birth and the year to count years in relation to. 
